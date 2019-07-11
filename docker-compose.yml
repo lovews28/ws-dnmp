@@ -24,15 +24,6 @@ services:
           networks:
               - backend
           container_name: "compose-php"
-    composer:
-          image: composer/composer:php7
-          volumes:
-              - ./html:/var/www/html
-          working_dir: /var/www/html
-          command: install
-          networks:
-              - backend       # 容器名称
-          container_name: "compose-composer"
     mysql:
           image: mysql:5.7
           ports:
