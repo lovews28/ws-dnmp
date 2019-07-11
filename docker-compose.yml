@@ -37,4 +37,4 @@ services:
               container_name: "compose-mysql"
 
         networks:
-              default;
+              - default;
