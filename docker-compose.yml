@@ -13,7 +13,7 @@ services:
                     - "$PWD/conf.d:/etc/nginx/conf.d"
                     - "$PWD/html:/usr/share/nginx/html"
                 networks:
-                    - default       # 容器名称
+                    - backend       # 容器名称
                 container_name: "compose-nginx"
         php:
               build: ./php-mysqli        # image指定build Dockerfile生成镜像的名称
@@ -23,7 +23,7 @@ services:
               volumes:
                   - "$PWD/html:/var/www/html"
               networks:
-                  - default
+                  - backend
               container_name: "compose-php"
         mysql:
               image: mysql:5.7
@@ -33,8 +33,9 @@ services:
               environment:            # mysql密码
                   - MYSQL_ROOT_PASSWORD=123456
               networks:
-                  - default
+                  - backend
               container_name: "compose-mysql"
 
         networks:
-              - default;
+              backend:
+                      driver: bridge   
