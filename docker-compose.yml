@@ -49,7 +49,7 @@ services:
               - backend
           container_name: "compose-redis"
     elasticsearch:
-          image: elasticsearch:latest
+          image: elasticsearch:7.2.0
           container_name: "compose-elasticsearch"
           environment:
               - discovery.type=single-node
