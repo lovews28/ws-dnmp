@@ -48,6 +48,19 @@ services:
           networks:
               - backend
           container_name: "compose-redis"
+    elasticsearch:
+          image: elasticsearch:latest
+          container_name: "compose-elasticsearch"
+          environment:
+              - discovery.type=single-node
+              - "ES_JAVA_OPTS=-Xms256m -Xmx256m"
+          volumes:
+              - ./esdata:/usr/share/elasticsearch/data
+          hostname: elasticsearch
+          restart: always
+          ports:
+              - "9200:9200"
+              - "9200:9300"
 
 networks:
     backend:
