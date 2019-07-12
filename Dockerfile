@@ -9,4 +9,5 @@ RUN apt-get update && apt-get install -y \
 	&& docker-php-ext-install -j$(nproc) gd \
 	&& pecl install redis-4.0.1 \
 	&& pecl install xdebug-2.6.0 \
-	&& docker-php-ext-enable redis xdebug
+	&& pecl install swoole \
+	&& docker-php-ext-enable redis xdebug swoole
