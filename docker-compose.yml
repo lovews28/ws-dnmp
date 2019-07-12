@@ -36,9 +36,13 @@ services:
               - backend
           container_name: "compose-mysql"
     redis:
-          image: redis:5.0-alpine
+          build:
+              ./redis
           ports:
               - "6379:6379"
+          networks:
+              - backend
+          container_name: "compose-redis"
 
 networks:
     backend:
