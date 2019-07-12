@@ -17,7 +17,7 @@ services:
             container_name: "compose-nginx"
     php:
           build:
-            context: .
+              context: .
           ports:
               - "9000:9000"
           volumes:
@@ -37,7 +37,7 @@ services:
           container_name: "compose-mysql"
     redis:
           build:
-              ./redis
+              context: ./redis
           ports:
               - "6379:6379"
           networks:
