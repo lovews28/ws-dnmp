@@ -36,13 +36,15 @@ services:
               - backend
           container_name: "compose-mysql"
     redis:
-          image: redis:5.0.5
+          image: redis:latest
           ports:
               - "6379:6379"
-          volumes:
-              - ./conf/redis.conf:/etc/redis.conf:ro
-          restart: always
-          entrypoint: ["redis-server", "/etc/redis.conf"]
+          #volumes:
+          #    - ./conf/redis.conf:/etc/redis.conf:ro
+          #restart: always
+          #entrypoint: ["redis-server", "/etc/redis.conf"]
+          command:
+              redis-server
           networks:
               - backend
           container_name: "compose-redis"
