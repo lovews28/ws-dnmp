@@ -41,6 +41,8 @@ services:
               - "6379:6379"
           command:
               redis-server
+          volumes:
+              - ./data:/data
           networks:
               - backend
           container_name: "compose-redis"
