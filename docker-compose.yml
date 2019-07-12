@@ -16,7 +16,8 @@ services:
                 - backend       # 容器名称
             container_name: "compose-nginx"
     php:
-          image: php:7.2-fpm
+          build:
+            context: .
           ports:
               - "9000:9000"
           volumes:
