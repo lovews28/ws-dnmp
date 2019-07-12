@@ -43,8 +43,6 @@ services:
               - ./conf/redis.conf:/etc/redis.conf:ro
           restart: always
           entrypoint: ["redis-server", "/etc/redis.conf"]
-          command:
-              redis-server
           networks:
               - backend
           container_name: "compose-redis"
