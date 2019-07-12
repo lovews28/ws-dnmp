@@ -41,6 +41,8 @@ services:
               - "6379:6379"
           volumes:
               - ./conf/redis.conf:/etc/redis.conf:ro
+          restart: always
+          entrypoint: ["redis-server", "/etc/redis.conf"]
           command:
               redis-server
           networks:
