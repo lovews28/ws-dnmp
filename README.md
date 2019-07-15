@@ -1,4 +1,5 @@
 # ws-dnmp
+<<<<<<< HEAD
 
 #### 介绍
 dnmp初学
@@ -35,3 +36,6 @@ dnmp初学
 4. [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
 5. 码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
 6. 码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+=======
+自学docker
+>>>>>>> ba9ceef7af5ef513a15aef860f2bd9c88da324aa
