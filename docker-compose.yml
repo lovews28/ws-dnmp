@@ -5,6 +5,7 @@ services:
             image: nginx:latest        # 端口映射
             ports:
                 - "80:80"
+                - "11010:80"
             # 依赖关系 先跑php
             depends_on:
                 - "php"
