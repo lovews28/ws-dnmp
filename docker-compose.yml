@@ -6,6 +6,7 @@ services:
             ports:
                 - "80:80"
                 - "11010:11010"
+                - "11011:11011"
             # 依赖关系 先跑php
             depends_on:
                 - "php"

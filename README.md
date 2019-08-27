@@ -15,7 +15,7 @@ dnmp初学，主要搭建基础的lnmp环境
     在主机创建一个目录，用以保存composer的配置和缓存文件：
     mkdir ~/ws-dnmp/composer
     打开主机的 ~/.bashrc 或者 ~/.zshrc 文件，加上：
-    composer () {
+    composer () { 
         tty=
         tty -s && tty=--tty
         docker run \
